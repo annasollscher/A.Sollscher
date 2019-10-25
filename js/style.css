@@ -1,6 +1,23 @@
 body {
-    background-color: #e74910;
+    background-image:url("/js/img/g-klav.jpg");
+    background-size: 175px;
+    background-position:center;
+    color:rgba(245, 245, 245, 0.849);
+    background-color:rgba(0,0,0,.5);
+    
+}
+#bild1 { 
+    margin-left: 100px;
+
+}
+#bild2 {
+    width: 46.25%;
+    height: 46.25%;
+    margin-left: 200px;
 }
 h1 {
-    color: rgb(9, 51, 90);
+    font-size: 35px;
+}
+h2 {
+    font-size: 30px;
 }

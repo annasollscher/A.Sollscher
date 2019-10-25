@@ -22,19 +22,19 @@ class Contact extends Domer {
     render(html) { //Läs om till HTML 
         return html`
     <section>
-    <em>Contact me here:</em>
+    <em><strong>Contact me here:</strong></em>
     <br>
-    <em>Name:</em>
+    <em><strong>Name:</strong></em>
     <br>
     <input type="text" bind="_name" placeholder="Name">
     <button type="text" click="onClick">Send</button>
     <br>
-    <em>Gmail:</em>
+    <em><strong>Gmail:</strong></em>
     <br>
     <input type="gmail" bind="_gmail" placeholder="Mail">
     <button type="text" click="onClick2">Send</button>
     <br>
-    <em>Subject:</em>
+    <em><strong>Subject:</strong></em>
     <br>
     <input type="subject"bind="_subject" placeholder="Subject">
     <button type="text" click="onClick3">Send</button>
