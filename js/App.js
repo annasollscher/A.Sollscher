@@ -10,7 +10,7 @@ class App extends Domer {
 
         this.contact = new Contact(this.concertlist);
 
-        /* valde att ej ha med detta på sidan
+        /* valde att ej ha med detta på sidan för tillfället
         this.concertlist.addConcert( new Concert("Christmas Concert", "2019-12-24") ); //skicka vidare till en annan klass som är där för att hålla i koncerter.
         this.concertlist.addConcert( new Concert("New Year Concert", "2019-12-31") );
         this.concertlist.addConcert( new Concert("China", "2021-02-18") );*/
@@ -30,7 +30,7 @@ class App extends Domer {
     ${this.contact} 
     ${this.concertlist}
     
-    <div id="footerAnna">
+    <div id="footerAnna"> <!---här är en footer/visas längst ner på sidan--->
     <footer id="footer">Anna Söllscher</footer>
     </div>
         </section>
