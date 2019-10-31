@@ -2,7 +2,7 @@ body {
     background-image:url("/js/img/g-klav.jpg");
     background-size: 123px;
     background-position:center;
-    color:rgba(245, 245, 245, 0.849);
+    color:whitesmoke;
     background-color:rgba(0,0,0,.5);
     
 }
@@ -13,7 +13,7 @@ body {
 #bild2 {
     width: 600px;
     height: 550px;
-    margin-left: 100px;
+    margin-left: 180px;
 }
 h1 {
     font-size: 50px;
@@ -25,10 +25,10 @@ h2 {
   background-color:darkgrey;
   padding:20px;
   width:100%;
-  height: 35px;
+  height: 50px;
   bottom:0px;
   color: black;
-  font-size:20px;
+  font-size:15px;
   text-align: center;
   flex-direction: row;
  }

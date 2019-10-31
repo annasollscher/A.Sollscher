@@ -8,7 +8,9 @@ class App extends Domer {
 
         this.concertlist = new Concertlist(); // klass med en låda 
 
-        this.contact = new Contact(this.concertlist);
+        this.contact = new Contact(this.concertlist); /*this.contakt= blir ett objekt som 
+        innehåller information från mallen new Contact, i new Contact finns concertlist.
+        Blir det komposition?*/
 
         /* valde att ej ha med detta på sidan för tillfället
         this.concertlist.addConcert( new Concert("Christmas Concert", "2019-12-24") ); //skicka vidare till en annan klass som är där för att hålla i koncerter.
@@ -30,8 +32,8 @@ class App extends Domer {
     ${this.contact} 
     ${this.concertlist}
     
-    <div id="footerAnna"> <!---här är en footer/visas längst ner på sidan--->
-    <footer id="footer">Anna Söllscher</footer>
+    <div id="footerAnna"> <!---här är en footer med info/visas längst ner på sidan--->
+    <footer id="footer">Contact:<br>Anna Söllscher<br>Telephone number: 0708-462472<br>Mail:annamaria.sollscher@gmail.com</footer>
     </div>
         </section>
 
