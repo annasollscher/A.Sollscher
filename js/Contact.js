@@ -1,25 +1,24 @@
 class Contact extends Domer {
-    _name = "";
+    _name = ""; //privat attribut
     _gmail = "";
     _subject = "";
-
-    onClick() {
-        //Onclick fångar vad du har i textrutan. Vi måste fånga det i en variabel.    
-        let name = this._name;
-        alert(name);
+    _title = "";
+    _date = "";
+    _concertlist = "";          //skapar ett privat attribut med concertlist
+    constructor(concertlist) { // konstruktor som har en concertlist
+        super()                    //Ärver från domer
+        this._concertlist = concertlist //this = pekar på objektet.
     }
 
-    onClick2() {
-        let gmail = this._gmail;
-        alert(gmail);
+    onClickAddConcert() { // skriver ut new concert, name, title, date, gmail, subject på hemsidan
+        this._concertlist.addConcert(new Concert(this._name, this._gmail, this._subject, this._title, this._date));
+
+    }
+    onClickRemoveConcert() { //Tar bort name, date, title, date, gmail, subject från listan, dvs "remove". 
+        this._concertlist.removeConcert(new Concert(this._name, this._gmail, this._subject, this._title, this._date));
     }
 
-    onClick3() {
-        let subject = this._subject;
-        alert(subject);
-    }
-
-    render(html) { //Läs om till HTML 
+    render(html) { //Läser om till HTML
         return html`
     <section>
     <em><strong>Contact me here:</strong></em>
@@ -27,20 +26,29 @@ class Contact extends Domer {
     <em><strong>Name:</strong></em>
     <br>
     <input type="text" bind="_name" placeholder="Name">
-    <button type="text" click="onClick">Send</button>
     <br>
     <em><strong>Gmail:</strong></em>
     <br>
-    <input type="gmail" bind="_gmail" placeholder="Mail">
-    <button type="text" click="onClick2">Send</button>
+    <input type="gmail" bind="_gmail" placeholder="Email">
     <br>
     <em><strong>Subject:</strong></em>
     <br>
     <input type="subject"bind="_subject" placeholder="Subject">
-    <button type="text" click="onClick3">Send</button>
+    <br>
+    <em><strong>Add concert title:</strong></em>
+    <br>
+    <input type="text" bind="_title" placeholder="Write concert title here">
+    <br>
+    <em><strong>Date:</strong></em>
+    <br>
+    <input type= "text" bind="_date" placeholder="Write date for concert here">
+    <br>
+    <br>
+    <button click= "onClickAddConcert">Press here to add everything</button>
+    <br>
+    <br>
+    <button click="onClickRemoveConcert">Press here to remove everything</button>
     </section>
-
-
-     `
+    `
     }
 }
