@@ -4,7 +4,7 @@ class Concert extends Domer {
     _subject = "";
     _title = "";
     _date = "";
-    constructor(name, gmail, subject, title, date) { // En konstruktor som tar emot name,date,gmail,subject,title
+    constructor(name, gmail, subject, title, date) { // En konstruktor som tar emot name,gmail,subject,title, date
         super(); //Ärver från Domer
         this._name = name; //this= pekar på sig själv, alltså this name = name
         this._gmail = gmail;
@@ -13,10 +13,10 @@ class Concert extends Domer {
         this._date = date;
     }
 
-    //Name och gmail ska vara på samma rad, subject på en enskild rad och title, date på samma rad.
+    //Lista med name, gmail, subject,title,date
     render(html) {   //Förvandlar till HTML. Render är en metod som ärver av domer, metoden ska returnera en sträng.
         return html` 
-        <h3>This is the information that you have submitted</h3>
+        <h3>This is the information that you have submitted</h3> <!---Texten dyker upp när fälten är inskrivna, och användaren trycker på knappen!--->
         <li>${this._name}</li> <!---detta puschas in i UL taggen --->
         <li>${this._gmail}</li>
         <li>${this._subject}</li>

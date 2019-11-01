@@ -1,10 +1,10 @@
 class Contact extends Domer {
-    _name = ""; //privat attribut
+    _name = ""; //privat attribut=_
     _gmail = "";
     _subject = "";
     _title = "";
     _date = "";
-    _concertlist = "";          //skapar ett privat attribut med concertlist
+    _concertlist = "";         
     constructor(concertlist) { // konstruktor som har en concertlist
         super()                    //Ärver från domer
         this._concertlist = concertlist //this = pekar på objektet.
@@ -21,33 +21,33 @@ class Contact extends Domer {
     render(html) { //Läser om till HTML
         return html`
     <section>
-    <em><strong>Contact me here:</strong></em>
+    <em><strong>Contact me here:</strong></em> 
     <br>
     <em><strong>Name:</strong></em>
     <br>
-    <input type="text" bind="_name" placeholder="Name">
+    <input type="text" bind="_name" placeholder="Name"> <!---placeholder, name--->
     <br>
     <em><strong>Gmail:</strong></em>
     <br>
-    <input type="gmail" bind="_gmail" placeholder="Email">
+    <input type="gmail" bind="_gmail" placeholder="Email"><!---placeholder,email--->
     <br>
     <em><strong>Subject:</strong></em>
     <br>
-    <input type="subject"bind="_subject" placeholder="Subject">
+    <input type="subject"bind="_subject" placeholder="Subject"><!---placeholder, subject--->
     <br>
     <em><strong>Add concert title:</strong></em>
     <br>
-    <input type="text" bind="_title" placeholder="Write concert title here">
+    <input type="text" bind="_title" placeholder="Write concert title here"><!---placeholder, write concert title here--->
     <br>
     <em><strong>Date:</strong></em>
     <br>
-    <input type= "text" bind="_date" placeholder="Write date for concert here">
+    <input type= "text" bind="_date" placeholder="Write date for concert here"><!---placeholder, write date for concert here-->
     <br>
     <br>
-    <button click= "onClickAddConcert">Press here to add everything</button>
+    <button click= "onClickAddConcert">Press here to add</button><!---knapp som kopplas till "onClickAddConcert"-->
     <br>
     <br>
-    <button click="onClickRemoveConcert">Press here to remove everything</button>
+    <button click="onClickRemoveConcert">Press here to remove</button><!--knapp som kopplas till "onClickRemoveConcert"-->
     </section>
     `
     }
